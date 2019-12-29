@@ -33,7 +33,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 User newUser = new User();
                 newUser.setId(id);
                 newUser.setName((String) map.get("name"));
-                newUser.setName((String) map.get("email"));
+                newUser.setEmail((String) map.get("email"));
                 newUser.setGender((String) map.get("gender"));
                 newUser.setLocale((String) map.get("locale"));
                 newUser.setUserpic((String) map.get("picture"));

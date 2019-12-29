@@ -14,6 +14,7 @@ plugins {
 	id 'org.springframework.boot' version '2.2.1.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
+	id 'io.franzbecker.gradle-lombok' version '1.14'
 }
 
 group = 'com.letscode'
@@ -25,6 +26,11 @@ configurations {
 	runtimeClasspath {
 		extendsFrom developmentOnly
 	}
+}
+
+lombok {
+	version = '1.18.4'
+	sha256 = ""
 }
 
 repositories {
@@ -39,7 +45,7 @@ dependencies {
 	implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.1.1.RELEASE'
 	implementation 'org.postgresql:postgresql'
 	implementation 'org.projectlombok:lombok'
-	compile('javax.xml.bind:jaxb-api')
+//	compile('javax.xml.bind:jaxb-api')
 //	compile('com.sun.xml.bind:jaxb-core')
 //	compile('com.sun.xml.bind:jaxb-impl')
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
