@@ -35,6 +35,14 @@ lombok {
 
 repositories {
 	mavenCentral()
+	jcenter()
+	maven {
+		url "https://maven.springframework.org/release"
+	}
+	maven {
+		url "https://maven.restlet.com"
+	}
+
 }
 
 dependencies {
@@ -48,6 +56,8 @@ dependencies {
 //	compile('javax.xml.bind:jaxb-api')
 //	compile('com.sun.xml.bind:jaxb-core')
 //	compile('com.sun.xml.bind:jaxb-impl')
+	implementation 'org.springframework.session:spring-session-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
