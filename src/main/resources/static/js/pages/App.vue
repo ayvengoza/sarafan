@@ -12,7 +12,7 @@
 <script>
     import MessagesList from 'components/messages/MessageList.vue'
     export default {
-        compoents: {
+        components: {
             MessagesList
         },
         data() {
